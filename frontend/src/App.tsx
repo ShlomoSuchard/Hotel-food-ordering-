@@ -204,8 +204,15 @@ export default function App() {
   };
 
   // ── SCAN PHOTO
-  const scan = async (e) => {
-    const file=e.target.files?.[0];
+const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/scan-image", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    image: b64,
+    mimeType: file.type || "image/jpeg",
+    key: "hk_test123"
+  })
+});    const file=e.target.files?.[0];
     if(!file)return;
     setStep("scanning"); setPhoto(URL.createObjectURL(file));
     const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(",")[1]);r.onerror=rej;r.readAsDataURL(file);});
@@ -247,17 +254,14 @@ export default function App() {
   const allSent = grouped.filter(g=>g.vendor).length>0 && sent.length>=grouped.filter(g=>g.vendor).length;
 
   // ── EMAIL IMPORT
-  const parseEmail = async () => {
-    if(!emailTxt.trim())return;
-    setEmailBusy(true);setEmailRes(null);
-    try {
-      const res=await fetch("https://api.anthropic.com/v1/messages",{
-        method:"POST",headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
-          model:"claude-sonnet-4-6",max_tokens:1000,
-          messages:[{role:"user",content:"Extract all food items with prices from this kosher vendor email.\nReturn ONLY a JSON array, no markdown:\n[{\"item\":\"name\",\"price\":0.00,\"unit\":\"kg|L|unit|pack|case|lb\",\"weight\":\"e.g. 5 LB\",\"pack\":\"e.g. 12/CS\",\"vendorName\":\"vendor\",\"category\":\"meat|fish|dairy|produce|dry|bakery|beverage\"}]\nIf a field unknown use empty string. Price must be a number.\n\nEmail:\n"+emailTxt.slice(0,4000)}]
-        })
-      });
+  const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/email-ingest", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    text: emailTxt,
+    key: "hk_test123"
+  })
+});
       const data=await res.json();
       const raw=data.content?.map(b=>b.text||"").join("")||"[]";
       const parsed=JSON.parse(raw.replace(/```json|```/g,"").trim());
