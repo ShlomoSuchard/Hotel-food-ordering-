@@ -148,6 +148,74 @@ Invoice: ${text.slice(0, 2000)}`
   saveDB(db);
   res.json({ processed: results.length, totalPrices: results.reduce((a,b)=>a+b,0) });
 });
+app.post("/api/scan-image", async (req, res) => {
+  const { image, mimeType, key } = req.body;
+
+  if (key !== HOTEL_KEY) {
+    return res.status(401).json({ error: "Invalid key" });
+  }
+
+  if (!image) {
+    return res.status(400).json({ error: "No image provided" });
+  }
+
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": CLAUDE_API_KEY,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-6",
+        max_tokens: 1000,
+        messages: [
+          {
+            role: "user",
+            content: [
+              {
+                type: "image",
+                source: {
+                  type: "base64",
+                  media_type: mimeType || "image/jpeg",
+                  data: image,
+                },
+              },
+              {
+                type: "text",
+                text: `This is a kosher hotel kitchen order note. Extract every food item listed.
+
+Return ONLY a JSON array:
+
+[{"name":"item","qty":"number","unit":"kg|L|units|packs","category":"meat|fish|dairy|produce|dry|bakery|beverage"}]
+
+If qty is missing use 1.
+If category is unclear choose the closest match.`,
+              },
+            ],
+          },
+        ],
+      }),
+    });
+
+    const data = await response.json();
+
+    const raw =
+      data.content?.map((b) => b.text || "").join("") || "[]";
+
+    const parsed = JSON.parse(
+      raw.replace(/```json|```/g, "").trim()
+    );
+
+    return res.json(parsed);
+  } catch (err) {
+    console.error("Scan Image Error:", err.message);
+    return res.status(500).json({
+      error: err.message,
+    });
+  }
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Hotel price server running on port ${PORT}`));
