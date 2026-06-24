@@ -858,7 +858,7 @@ const parseEmail = async () => {
         </div>
       )}
 
-      {/* FOOTER */}
+            {/* FOOTER */}
       <div style={{background:"#111",color:"#888",padding:"24px 20px",marginTop:30,lineHeight:1.7}}>
         <div style={{maxWidth:800,margin:"0 auto"}}>
           <div style={{color:"#C8A84B",fontWeight:800,fontSize:13,marginBottom:8,letterSpacing:1}}>SLEEPY HOLLOW HOTEL — FOOD ORDERING & PRICE-TRACKING SYSTEM</div>
