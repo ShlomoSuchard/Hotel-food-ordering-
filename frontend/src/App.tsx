@@ -267,13 +267,11 @@ const parseEmail = async () => {
         key: "hk_test123"
       })
     });
-
     const data = await res.json();
     const parsed = Array.isArray(data) ? data : data.items || data;
     const newDB = { ...priceDB };
     const newLog = { ...priceLog };
     const changes = [];
-
     if (Array.isArray(parsed)) {
       parsed.forEach(row => {
         if (!row.item || !row.price) return;
@@ -281,14 +279,12 @@ const parseEmail = async () => {
         const prev = newDB[key];
         const newPrice = parseFloat(row.price);
         let change = null;
-
         if (prev && prev.price && prev.price !== newPrice) {
           const pct = ((newPrice - prev.price) / prev.price) * 100;
           change = { from: prev.price, to: newPrice, pct };
           if (!newLog[key]) newLog[key] = [{ price: prev.price, date: prev.updatedAt || "earlier", vendor: prev.vendorName || "" }];
           newLog[key].push({ price: newPrice, date: today(), vendor: row.vendorName || "" });
         }
-
         newDB[key] = {
           item: row.item,
           price: newPrice,
@@ -304,7 +300,6 @@ const parseEmail = async () => {
         changes.push({ ...newDB[key], change });
       });
     }
-
     savePrices(newDB);
     setPriceLog(newLog);
     store.set("pricelog", newLog);
@@ -316,7 +311,6 @@ const parseEmail = async () => {
   }
   setEmailBusy(false);
 };
-
   // ── VENDOR MGMT
   const saveVendor = () => {
     if(!editV)return;
