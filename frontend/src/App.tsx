@@ -255,7 +255,7 @@ const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/a
 
  // ── EMAIL IMPORT
 const parseEmail = async () => {
-  if(!emailTxt.trim())return;
+  if (!emailTxt.trim()) return;
   setEmailBusy(true);
   setEmailRes(null);
   try {
@@ -269,7 +269,7 @@ const parseEmail = async () => {
     });
 
     const data = await res.json();
-    const parsed = data.extracted !== undefined ? data : data.items || data;
+    const parsed = Array.isArray(data) ? data : data.items || data;
     const newDB = { ...priceDB };
     const newLog = { ...priceLog };
     const changes = [];
@@ -311,7 +311,7 @@ const parseEmail = async () => {
     setEmailRes({ count: parsed.length || 0, items: changes });
     setEmailTxt("");
     toast_((parsed.length || 0) + " prices updated");
-  } catch(err) {
+  } catch (err) {
     toast_("Could not parse email — try again", "err");
   }
   setEmailBusy(false);
