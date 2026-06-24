@@ -254,43 +254,60 @@ const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/a
   const allSent = grouped.filter(g=>g.vendor).length>0 && sent.length>=grouped.filter(g=>g.vendor).length;
 
   // ── EMAIL IMPORT
-  const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/email-ingest", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    text: emailTxt,
-    key: "hk_test123"
-  })
-});
-      const data=await res.json();
-      const raw=data.content?.map(b=>b.text||"").join("")||"[]";
-      const parsed=JSON.parse(raw.replace(/```json|```/g,"").trim());
-      const newDB={...priceDB};
-      const newLog={...priceLog};
-      const changes=[];
-      parsed.forEach(row=>{
-        if(!row.item||!row.price)return;
-        const key=row.item.toLowerCase().trim();
-        const prev=newDB[key];
-        const newPrice=parseFloat(row.price);
-        let change=null;
-        if(prev&&prev.price&&prev.price!==newPrice){
-          const pct=((newPrice-prev.price)/prev.price)*100;
-          change={from:prev.price,to:newPrice,pct};
-          if(!newLog[key])newLog[key]=[{price:prev.price,date:prev.updatedAt||"earlier",vendor:prev.vendorName||""}];
-          newLog[key].push({price:newPrice,date:today(),vendor:row.vendorName||""});
+const parseEmail = async () => {
+  if(!emailTxt.trim())return;
+  setEmailBusy(true);setEmailRes(null);
+  try {
+    const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/email-ingest", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: emailTxt,
+        key: "hk_test123"
+      })
+    });
+    
+    const data = await res.json();
+    const parsed = data.items || data;
+    const newDB = {...priceDB};
+    const changes = [];
+    
+    if (Array.isArray(parsed)) {
+      parsed.forEach(row => {
+        if(!row.item || !row.price) return;
+        const key = row.item.toLowerCase().trim();
+        const prev = newDB[key];
+        const newPrice = parseFloat(row.price);
+        let change = null;
+        if(prev && prev.price && prev.price !== newPrice) {
+          const pct = ((newPrice - prev.price) / prev.price) * 100;
+          change = { from: prev.price, to: newPrice, pct };
         }
-        newDB[key]={item:row.item,price:newPrice,prevPrice:prev?.price||null,unit:row.unit||"unit",weight:row.weight||"",pack:row.pack||"",vendorName:row.vendorName||(prev?.vendorName||""),category:row.category||"dry",updatedAt:today(),source:"email-import"};
-        changes.push({...newDB[key],change});
+        newDB[key] = {
+          item: row.item,
+          price: newPrice,
+          prevPrice: prev?.price || null,
+          unit: row.unit || "unit",
+          weight: row.weight || "",
+          pack: row.pack || "",
+          vendorName: row.vendorName || "",
+          category: row.category || "dry",
+          updatedAt: today(),
+          source: "email-import"
+        };
+        changes.push({...newDB[key], change});
       });
-      savePrices(newDB);
-      setPriceLog(newLog);store.set("pricelog",newLog);
-      setEmailRes({count:parsed.length,items:changes});
-      setEmailTxt("");
-      toast_(parsed.length+" prices updated");
-    } catch{toast_("Could not parse email — try again","err");}
-    setEmailBusy(false);
-  };
+    }
+    
+    savePrices(newDB);
+    setEmailRes({ count: parsed.length || 0, items: changes });
+    setEmailTxt("");
+    toast_((parsed.length || 0) + " prices updated");
+  } catch(err) {
+    toast_("Could not parse email — try again","err");
+  }
+  setEmailBusy(false);
+};
 
   // ── VENDOR MGMT
   const saveVendor = () => {
