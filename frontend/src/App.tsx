@@ -204,113 +204,124 @@ export default function App() {
   };
 
   // ── SCAN PHOTO
-const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/scan-image", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    image: b64,
-    mimeType: file.type || "image/jpeg",
-    key: "hk_test123"
-  })
-});    const file=e.target.files?.[0];
-    if(!file)return;
-    setStep("scanning"); setPhoto(URL.createObjectURL(file));
-    const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(",")[1]);r.onerror=rej;r.readAsDataURL(file);});
-    const isPdf=file.type==="application/pdf";
-    const mediaBlock=isPdf
-      ?{type:"document",source:{type:"base64",media_type:"application/pdf",data:b64}}
-      :{type:"image",source:{type:"base64",media_type:file.type||"image/jpeg",data:b64}};
+  const scan = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setStep("scanning");
+    setPhoto(URL.createObjectURL(file));
+    const b64 = await new Promise((res, rej) => {
+      const r = new FileReader();
+      r.onload = () => res(r.result.split(",")[1]);
+      r.onerror = rej;
+      r.readAsDataURL(file);
+    });
+    const isPdf = file.type === "application/pdf";
+    const mediaBlock = isPdf
+      ? { type: "document", source: { type: "base64", media_type: "application/pdf", data: b64 } }
+      : { type: "image", source: { type: "base64", media_type: file.type || "image/jpeg", data: b64 } };
+    try {
+      const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/scan-image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          image: b64,
+          mimeType: file.type || "image/jpeg",
+          key: "hk_test123"
+        })
+      });
+      const data = await res.json();
+      const parsed = Array.isArray(data) ? data : data.items || data;
+      if (!parsed || !parsed.length) {
+        toast_("No items found — retake photo clearly", "err");
+        setStep("home");
+        e.target.value = "";
+        return;
+      }
+      setItems(parsed.map(it => {
+        const v = bestV(it.category);
+        const pr = findPrice(it.name, priceDB);
+        return {
+          id: genId(),
+          name: it.name,
+          qty: it.qty || "1",
+          unit: it.unit || "units",
+          catId: it.category,
+          vendorId: v?.id || null,
+          vendorName: v?.name || null,
+          price: pr?.price || 0,
+          weight: pr?.weight || "",
+          pack: pr?.pack || ""
+        };
+      }));
+      setStep("review");
+    } catch (err) {
+      toast_("Could not read — check connection and retry", "err");
+      setStep("home");
+    }
+    e.target.value = "";
+  };
+
+  const reset = () => { setStep("home"); setItems([]); setPhoto(null); setSent([]); };
+  const addItem = () => {
+    const v = bestV("dry");
+    setItems(p => [...p, {
+      id: genId(),
+      name: "New item",
+      qty: "1",
+      unit: "units",
+      catId: "dry",
+      vendorId: v?.id || null,
+      vendorName: v?.name || null,
+      price: 0,
+      weight: "",
+      pack: ""
+    }]);
+  };
+  const finish = () => { saveHistory([{ id: genId(), date: today(), dept, items }, ...history].slice(0, 300)); toast_("Order saved"); };
+  const allSent = grouped.filter(g => g.vendor).length > 0 && sent.length >= grouped.filter(g => g.vendor).length;
+
+  // ── EMAIL IMPORT
+  const parseEmail = async () => {
+    if(!emailTxt.trim())return;
+    setEmailBusy(true);setEmailRes(null);
     try {
       const res=await fetch("https://api.anthropic.com/v1/messages",{
         method:"POST",headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
           model:"claude-sonnet-4-6",max_tokens:1000,
-          messages:[{role:"user",content:[
-            mediaBlock,
-            {type:"text",text:"This is a kosher hotel kitchen order note. Extract every food item listed.\nReturn ONLY a JSON array, no markdown:\n[{\"name\":\"item name\",\"qty\":\"number\",\"unit\":\"kg|L|units|packs|cases|lb\",\"category\":\"meat|fish|dairy|produce|dry|bakery|beverage\"}]\nIf qty missing use \"1\". If unit unclear use \"kg\" for food, \"units\" for countable, \"L\" for liquids."}
-          ]}]
+          messages:[{role:"user",content:"Extract all food items with prices from this kosher vendor email.\nReturn ONLY a JSON array, no markdown:\n[{\"item\":\"name\",\"price\":0.00,\"unit\":\"kg|L|unit|pack|case|lb\",\"weight\":\"e.g. 5 LB\",\"pack\":\"e.g. 12/CS\",\"vendorName\":\"vendor\",\"category\":\"meat|fish|dairy|produce|dry|bakery|beverage\"}]\nIf a field unknown use empty string. Price must be a number.\n\nEmail:\n"+emailTxt.slice(0,4000)}]
         })
       });
       const data=await res.json();
       const raw=data.content?.map(b=>b.text||"").join("")||"[]";
       const parsed=JSON.parse(raw.replace(/```json|```/g,"").trim());
-      if(!parsed||!parsed.length){toast_("No items found — retake photo clearly","err");setStep("home");e.target.value="";return;}
-      setItems(parsed.map(it=>{
-        const v=bestV(it.category);
-        const pr=findPrice(it.name,priceDB);
-        return {id:genId(),name:it.name,qty:it.qty||"1",unit:it.unit||"units",catId:it.category,vendorId:v?.id||null,vendorName:v?.name||null,price:pr?.price||0,weight:pr?.weight||"",pack:pr?.pack||""};
-      }));
-      setStep("review");
-    } catch(err){toast_("Could not read — check connection and retry","err");setStep("home");}
-    e.target.value="";
-  };
-
-  const reset = () => { setStep("home");setItems([]);setPhoto(null);setSent([]); };
-  const addItem = () => {
-    const v=bestV("dry");
-    setItems(p=>[...p,{id:genId(),name:"New item",qty:"1",unit:"units",catId:"dry",vendorId:v?.id||null,vendorName:v?.name||null,price:0,weight:"",pack:""}]);
-  };
-  const finish = () => { saveHistory([{id:genId(),date:today(),dept,items},...history].slice(0,300)); toast_("Order saved"); };
-  const allSent = grouped.filter(g=>g.vendor).length>0 && sent.length>=grouped.filter(g=>g.vendor).length;
-
- // ── EMAIL IMPORT
-const parseEmail = async () => {
-  if (!emailTxt.trim()) return;
-  setEmailBusy(true);
-  setEmailRes(null);
-  try {
-    const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/email-ingest", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        text: emailTxt,
-        key: "hk_test123"
-      })
-    });
-    const data = await res.json();
-    const parsed = Array.isArray(data) ? data : data.items || data;
-    const newDB = { ...priceDB };
-    const newLog = { ...priceLog };
-    const changes = [];
-    if (Array.isArray(parsed)) {
-      parsed.forEach(row => {
-        if (!row.item || !row.price) return;
-        const key = row.item.toLowerCase().trim();
-        const prev = newDB[key];
-        const newPrice = parseFloat(row.price);
-        let change = null;
-        if (prev && prev.price && prev.price !== newPrice) {
-          const pct = ((newPrice - prev.price) / prev.price) * 100;
-          change = { from: prev.price, to: newPrice, pct };
-          if (!newLog[key]) newLog[key] = [{ price: prev.price, date: prev.updatedAt || "earlier", vendor: prev.vendorName || "" }];
-          newLog[key].push({ price: newPrice, date: today(), vendor: row.vendorName || "" });
+      const newDB={...priceDB};
+      const newLog={...priceLog};
+      const changes=[];
+      parsed.forEach(row=>{
+        if(!row.item||!row.price)return;
+        const key=row.item.toLowerCase().trim();
+        const prev=newDB[key];
+        const newPrice=parseFloat(row.price);
+        let change=null;
+        if(prev&&prev.price&&prev.price!==newPrice){
+          const pct=((newPrice-prev.price)/prev.price)*100;
+          change={from:prev.price,to:newPrice,pct};
+          if(!newLog[key])newLog[key]=[{price:prev.price,date:prev.updatedAt||"earlier",vendor:prev.vendorName||""}];
+          newLog[key].push({price:newPrice,date:today(),vendor:row.vendorName||""});
         }
-        newDB[key] = {
-          item: row.item,
-          price: newPrice,
-          prevPrice: prev?.price || null,
-          unit: row.unit || "unit",
-          weight: row.weight || "",
-          pack: row.pack || "",
-          vendorName: row.vendorName || (prev?.vendorName || ""),
-          category: row.category || "dry",
-          updatedAt: today(),
-          source: "email-import"
-        };
-        changes.push({ ...newDB[key], change });
+        newDB[key]={item:row.item,price:newPrice,prevPrice:prev?.price||null,unit:row.unit||"unit",weight:row.weight||"",pack:row.pack||"",vendorName:row.vendorName||(prev?.vendorName||""),category:row.category||"dry",updatedAt:today(),source:"email-import"};
+        changes.push({...newDB[key],change});
       });
-    }
-    savePrices(newDB);
-    setPriceLog(newLog);
-    store.set("pricelog", newLog);
-    setEmailRes({ count: parsed.length || 0, items: changes });
-    setEmailTxt("");
-    toast_((parsed.length || 0) + " prices updated");
-  } catch (err) {
-    toast_("Could not parse email — try again", "err");
-  }
-  setEmailBusy(false);
-};
+      savePrices(newDB);
+      setPriceLog(newLog);store.set("pricelog",newLog);
+      setEmailRes({count:parsed.length,items:changes});
+      setEmailTxt("");
+      toast_(parsed.length+" prices updated");
+    } catch{toast_("Could not parse email — try again","err");}
+    setEmailBusy(false);
+  };
+
   // ── VENDOR MGMT
   const saveVendor = () => {
     if(!editV)return;
@@ -858,7 +869,7 @@ const parseEmail = async () => {
         </div>
       )}
 
-            {/* FOOTER */}
+      {/* FOOTER */}
       <div style={{background:"#111",color:"#888",padding:"24px 20px",marginTop:30,lineHeight:1.7}}>
         <div style={{maxWidth:800,margin:"0 auto"}}>
           <div style={{color:"#C8A84B",fontWeight:800,fontSize:13,marginBottom:8,letterSpacing:1}}>SLEEPY HOLLOW HOTEL — FOOD ORDERING & PRICE-TRACKING SYSTEM</div>
