@@ -253,10 +253,11 @@ const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/a
   const finish = () => { saveHistory([{id:genId(),date:today(),dept,items},...history].slice(0,300)); toast_("Order saved"); };
   const allSent = grouped.filter(g=>g.vendor).length>0 && sent.length>=grouped.filter(g=>g.vendor).length;
 
-  // ── EMAIL IMPORT
+ // ── EMAIL IMPORT
 const parseEmail = async () => {
   if(!emailTxt.trim())return;
-  setEmailBusy(true);setEmailRes(null);
+  setEmailBusy(true);
+  setEmailRes(null);
   try {
     const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/email-ingest", {
       method: "POST",
@@ -266,23 +267,28 @@ const parseEmail = async () => {
         key: "hk_test123"
       })
     });
-    
+
     const data = await res.json();
-    const parsed = data.items || data;
-    const newDB = {...priceDB};
+    const parsed = data.extracted !== undefined ? data : data.items || data;
+    const newDB = { ...priceDB };
+    const newLog = { ...priceLog };
     const changes = [];
-    
+
     if (Array.isArray(parsed)) {
       parsed.forEach(row => {
-        if(!row.item || !row.price) return;
+        if (!row.item || !row.price) return;
         const key = row.item.toLowerCase().trim();
         const prev = newDB[key];
         const newPrice = parseFloat(row.price);
         let change = null;
-        if(prev && prev.price && prev.price !== newPrice) {
+
+        if (prev && prev.price && prev.price !== newPrice) {
           const pct = ((newPrice - prev.price) / prev.price) * 100;
           change = { from: prev.price, to: newPrice, pct };
+          if (!newLog[key]) newLog[key] = [{ price: prev.price, date: prev.updatedAt || "earlier", vendor: prev.vendorName || "" }];
+          newLog[key].push({ price: newPrice, date: today(), vendor: row.vendorName || "" });
         }
+
         newDB[key] = {
           item: row.item,
           price: newPrice,
@@ -290,21 +296,23 @@ const parseEmail = async () => {
           unit: row.unit || "unit",
           weight: row.weight || "",
           pack: row.pack || "",
-          vendorName: row.vendorName || "",
+          vendorName: row.vendorName || (prev?.vendorName || ""),
           category: row.category || "dry",
           updatedAt: today(),
           source: "email-import"
         };
-        changes.push({...newDB[key], change});
+        changes.push({ ...newDB[key], change });
       });
     }
-    
+
     savePrices(newDB);
+    setPriceLog(newLog);
+    store.set("pricelog", newLog);
     setEmailRes({ count: parsed.length || 0, items: changes });
     setEmailTxt("");
     toast_((parsed.length || 0) + " prices updated");
   } catch(err) {
-    toast_("Could not parse email — try again","err");
+    toast_("Could not parse email — try again", "err");
   }
   setEmailBusy(false);
 };
