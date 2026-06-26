@@ -215,10 +215,6 @@ export default function App() {
       r.onerror = rej;
       r.readAsDataURL(file);
     });
-    const isPdf = file.type === "application/pdf";
-    const mediaBlock = isPdf
-      ? { type: "document", source: { type: "base64", media_type: "application/pdf", data: b64 } }
-      : { type: "image", source: { type: "base64", media_type: file.type || "image/jpeg", data: b64 } };
     try {
       const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/scan-image", {
         method: "POST",
