@@ -154,8 +154,7 @@ Invoice: ${text.slice(0, 2000)}`
   res.json({ processed: results.length, totalPrices: results.reduce((a,b)=>a+b,0) });
 });
 app.post("/api/scan-image", async (req, res) => {
-  const { image, mimeType, key } = req.body;
-
+const { image, mimeType, mediaType, key } = req.body;
   if (key !== HOTEL_KEY) {
     return res.status(401).json({ error: "Invalid key" });
   }
@@ -183,7 +182,7 @@ app.post("/api/scan-image", async (req, res) => {
                 type: "image",
                 source: {
                   type: "base64",
-                  media_type: mimeType || "image/jpeg",
+                  media_type: mediaType || mimeType || "image/jpeg",
                   data: image,
                 },
               },
@@ -213,7 +212,7 @@ If category is unclear choose the closest match.`,
       raw.replace(/```json|```/g, "").trim()
     );
 
-    return res.json(parsed);
+    return res.json({ items: parsed });
   } catch (err) {
     console.error("Scan Image Error:", err.message);
     return res.status(500).json({
