@@ -217,14 +217,15 @@ export default function App() {
     });
     try {
       const res = await fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/scan-image", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          image: b64,
-          mimeType: file.type || "image/jpeg",
-          key: "hk_test123"
-        })
-      });
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    image: b64,
+    mediaType: file.type || "image/jpeg",
+    isPdf: false,
+    key: "hk_sleepyhollow2024"
+  })
+});
       const data = await res.json();
       const parsed = Array.isArray(data) ? data : data.items || data;
       if (!parsed || !parsed.length) {
