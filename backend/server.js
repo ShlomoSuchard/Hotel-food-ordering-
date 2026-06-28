@@ -231,6 +231,21 @@ app.post("/api/bulk-import", (req, res) => {
   saveDB(db);
   res.json({ imported: count, total: Object.keys(db).length });
 });
+app.get("/api/vendors", (req, res) => {
+  const key = req.query.key || req.headers["x-hotel-key"];
+  if (key !== HOTEL_KEY) return res.status(401).json({ error: "Invalid key" });
+  const db = loadDB();
+  res.json(db.__vendors || {});
+});
+
+app.post("/api/vendors", (req, res) => {
+  const { key, vendors } = req.body;
+  if (key !== HOTEL_KEY) return res.status(401).json({ error: "Invalid key" });
+  const db = loadDB();
+  db.__vendors = vendors;
+  saveDB(db);
+  res.json({ ok: true });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Hotel price server running on port ${PORT}`));
