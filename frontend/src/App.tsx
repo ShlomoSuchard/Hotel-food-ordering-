@@ -154,7 +154,16 @@ useEffect(() => {
   const PIN = "1234"; // change before going live
 
   // ── SAVE HELPERS
-  const saveVendors = v => { setVendors(v); store.set("vendors",v); };
+  const saveVendors = v => {
+  setVendors(v);
+  store.set("vendors", v);
+  fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/vendors", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ key: "hk_sleepyhollow2024", vendors: v })
+  }).catch(() => {});
+};
+ 
   const savePrices  = p => { setPriceDB(p);  store.set("prices",p); };
   const saveHistory = h => { setHistory(h);  store.set("history",h); };
 
