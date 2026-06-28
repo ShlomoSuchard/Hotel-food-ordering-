@@ -221,6 +221,16 @@ Invoice: ${text.slice(0, 2000)}`
   saveDB(db);
   res.json({ processed: results.length, totalPrices: results.reduce((a,b)=>a+b,0) });
 });
+app.post("/api/bulk-import", (req, res) => {
+  const { key, data } = req.body;
+  if (key !== HOTEL_KEY) return res.status(401).json({ error: "Invalid key" });
+  if (!data || typeof data !== "object") return res.status(400).json({ error: "No data provided" });
+  const db = loadDB();
+  let count = 0;
+  Object.entries(data).forEach(([k, v]) => { db[k] = v; count++; });
+  saveDB(db);
+  res.json({ imported: count, total: Object.keys(db).length });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Hotel price server running on port ${PORT}`));
