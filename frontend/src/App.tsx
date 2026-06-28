@@ -112,6 +112,16 @@ export default function App() {
     })
     .catch(() => {});
 }, []);
+useEffect(() => {
+  fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/vendors?key=hk_sleepyhollow2024")
+    .then(r => r.json())
+    .then(remote => {
+      if (remote && typeof remote === "object" && Object.keys(remote).length > 0) {
+        setVendors(remote);
+      }
+    })
+    .catch(() => {});
+}, []);
 
 
   // ── STAFF STATE
