@@ -101,7 +101,17 @@ export default function App() {
   const [vendors,  setVendors]  = useState(() => store.get("vendors", DEFAULT_VENDORS));
   const [priceDB,  setPriceDB]  = useState(() => { const s=store.get("prices",null); if(s&&Object.keys(s).length>0)return s; store.set("prices",SEED_PRICES); return SEED_PRICES; });
   const [history,  setHistory]  = useState(() => store.get("history",[]));
-  const [priceLog, setPriceLog] = useState(() => store.get("pricelog",{}));
+  const [priceLog, setPriceLog] = useState(() => store.get("pricelog",{}));useEffect(() => {
+  fetch("https://hotel-food-ordering-backend-bzrx.onrender.com/api/prices?key=hk_sleepyhollow2024")
+    .then(r => r.json())
+    .then(remote => {
+      if (remote && typeof remote === "object" && Object.keys(remote).length > 0) {
+        setPriceDB(prev => ({ ...prev, ...remote }));
+      }
+    })
+    .catch(() => {});
+}, []);
+
 
   // ── STAFF STATE
   const [step,     setStep]     = useState("home");
