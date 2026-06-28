@@ -1,1 +1,1318 @@
-{}
+{
+  "22x16x56 2.0 mil black liner 100/cs": {
+    "item": "22x16x56 2.0 MIL Black Liner",
+    "price": 33.00,
+    "unit": "100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "22x16x56 1.5 mil black liner 100/cs": {
+    "item": "22x16x56 1.5 MIL Black Liner",
+    "price": 26.00,
+    "unit": "100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "12/06/2026",
+    "source": "invoice-import"
+  },
+  "embellish 9\" dinner plates 12/20": {
+    "item": "Embellish 9\" Dinner Plates",
+    "price": 49.99,
+    "unit": "12/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/01/2026",
+    "source": "invoice-import"
+  },
+  "embellish 7\" salad plate clear 12/20": {
+    "item": "Embellish 7\" Salad Plate Clear",
+    "price": 33.00,
+    "unit": "12/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "embellish 6 oz dessert bowl 12/20": {
+    "item": "Embellish 6 oz Dessert Bowl",
+    "price": 16.99,
+    "unit": "12/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "embellish 10 oz bowl 12/20": {
+    "item": "Embellish 10 oz Bowl",
+    "price": 28.50,
+    "unit": "12/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "embellish 8 oz tumbler 25/20": {
+    "item": "Embellish 8 oz Tumbler",
+    "price": 35.00,
+    "unit": "25/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/01/2026",
+    "source": "invoice-import"
+  },
+  "embellish 7 oz tumbler 25/20": {
+    "item": "Embellish 7 oz Tumbler",
+    "price": 29.99,
+    "unit": "25/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "embellish 1 oz shot cups 50/50pk": {
+    "item": "Embellish 1 oz Shot Cups",
+    "price": 46.50,
+    "unit": "50/50pk",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "vertical design 10 oz double wall cups 500/cs": {
+    "item": "Vertical Design 10 oz Double Wall Cups",
+    "price": 62.00,
+    "unit": "500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/01/2026",
+    "source": "invoice-import"
+  },
+  "white 10 oz double wall cups 500/cs": {
+    "item": "White 10 oz Double Wall Cups",
+    "price": 62.00,
+    "unit": "500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/04/2026",
+    "source": "invoice-import"
+  },
+  "propack 16 oz cl pet cup 1000/cs": {
+    "item": "Propack 16 oz Clear PET Cup",
+    "price": 62.00,
+    "unit": "1000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "16 oz pet cups 1000/cs": {
+    "item": "16 oz PET Cups",
+    "price": 62.00,
+    "unit": "1000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/01/2026",
+    "source": "invoice-import"
+  },
+  "spot kiddush cups 24/10pk": {
+    "item": "Spot Kiddush Cups",
+    "price": 59.00,
+    "unit": "24/10pk",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "spot kiddush cups w/tray 24/5pk": {
+    "item": "Spot Kiddush Cups with Tray",
+    "price": 65.00,
+    "unit": "24/5pk",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "11/06/2026",
+    "source": "invoice-import"
+  },
+  "132/50 small brown tulip cups 2000/cs": {
+    "item": "Small Brown Tulip Cups",
+    "price": 96.00,
+    "unit": "2000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "12/02/2026",
+    "source": "invoice-import"
+  },
+  "hoffmaster white bev napkin 2ply 12x250/cs": {
+    "item": "Hoffmaster White Beverage Napkin 2-Ply",
+    "price": 57.00,
+    "unit": "12x250/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "16 oz white paper soup combo 250/cs": {
+    "item": "16 oz White Paper Soup Combo",
+    "price": 58.00,
+    "unit": "250/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/01/2026",
+    "source": "invoice-import"
+  },
+  "24x2000 cling film": {
+    "item": "24x2000 Cling Film",
+    "price": 22.00,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "18x2000 cling film": {
+    "item": "18x2000 Cling Film",
+    "price": 16.50,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "full size pan deep 50/cs": {
+    "item": "Full Size Pan Deep",
+    "price": 66.00,
+    "unit": "50/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "full size med deep pan 50/cs": {
+    "item": "Full Size Med Deep Pan",
+    "price": 63.50,
+    "unit": "50/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "premier half size alum pan 100/cs": {
+    "item": "Premier Half Size Aluminum Pan",
+    "price": 42.00,
+    "unit": "100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "full size foil lid 50/cs": {
+    "item": "Full Size Foil Lid",
+    "price": 34.00,
+    "unit": "50/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "11/06/2026",
+    "source": "invoice-import"
+  },
+  "half size foil lids 100/cs": {
+    "item": "Half Size Foil Lids",
+    "price": 30.00,
+    "unit": "100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "17/06/2026",
+    "source": "invoice-import"
+  },
+  "basix 24x500 hvy duty foil": {
+    "item": "Basix 24x500 Heavy Duty Foil",
+    "price": 51.00,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "basix 18x1000ft hvy duty foil roll": {
+    "item": "Basix 18x1000ft Heavy Duty Foil Roll",
+    "price": 75.00,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "24/03/2026",
+    "source": "invoice-import"
+  },
+  "18 x 500 heavy foil roll kings": {
+    "item": "18 x 500 Heavy Foil Roll",
+    "price": 33.00,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "silicone coated pan liner 16.3/8\" x 24.3/8\" 1000/cs": {
+    "item": "Silicone Coated Pan Liner 16.3/8\" x 24.3/8\"",
+    "price": 65.00,
+    "unit": "1000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "care plus latex large powder free gloves 10/100": {
+    "item": "Care Plus Latex Large Powder Free Gloves",
+    "price": 36.00,
+    "unit": "10/100",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "care plus latex medium powder free gloves 10/100": {
+    "item": "Care Plus Latex Medium Powder Free Gloves",
+    "price": 36.00,
+    "unit": "10/100",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "care plus latex ex-large powder free gloves 10/100": {
+    "item": "Care Plus Latex XL Powder Free Gloves",
+    "price": 36.00,
+    "unit": "10/100",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "24/03/2026",
+    "source": "invoice-import"
+  },
+  "x-large nitrile black pf gloves heavy 10/100": {
+    "item": "X-Large Nitrile Black Powder Free Gloves",
+    "price": 44.00,
+    "unit": "10/100",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "23/04/2026",
+    "source": "invoice-import"
+  },
+  "string knit cotton gloves 12/pairs": {
+    "item": "String Knit Cotton Gloves",
+    "price": 3.90,
+    "unit": "12/pairs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "waiters cotton gloves 1/doz": {
+    "item": "Waiters Cotton Gloves",
+    "price": 3.99,
+    "unit": "1/doz",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "04/06/2026",
+    "source": "invoice-import"
+  },
+  "white roll towel 8\"x720' 6/cs": {
+    "item": "White Roll Towel 8\"x720'",
+    "price": 29.50,
+    "unit": "6/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "c fold towel white captiva 12/200cs": {
+    "item": "C-Fold Towel White",
+    "price": 18.99,
+    "unit": "12/200cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "handy fuel 2 hr 72/cs": {
+    "item": "Handy Fuel 2 HR",
+    "price": 39.99,
+    "unit": "72/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "handy fuel 6 hr 24/cs": {
+    "item": "Handy Fuel 6 HR Double Wide Wick",
+    "price": 35.50,
+    "unit": "24/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/06/2026",
+    "source": "invoice-import"
+  },
+  "butane cassette fuel 8 oz 12/cs": {
+    "item": "Butane Cassette Fuel 8 oz",
+    "price": 26.50,
+    "unit": "12/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "re-24b 24 oz rect micro cont black 150/sets": {
+    "item": "24 oz Rect Micro Container Black",
+    "price": 33.50,
+    "unit": "150/sets",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "re-32 black micro 32 oz container 150/w lids": {
+    "item": "32 oz Black Micro Container with Lids",
+    "price": 37.99,
+    "unit": "150/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "8 oz combo deli containers 240/cs": {
+    "item": "8 oz Combo Deli Containers",
+    "price": 26.50,
+    "unit": "240/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "12/02/2026",
+    "source": "invoice-import"
+  },
+  "16 oz plastx deli contain combo 240/cs": {
+    "item": "16 oz Plastx Deli Container Combo",
+    "price": 26.50,
+    "unit": "240/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "32 oz plastx deli contain combo 240/cs": {
+    "item": "32 oz Plastx Deli Container Combo",
+    "price": 42.00,
+    "unit": "240/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "8 oz plastx deli containers combo 240/cs": {
+    "item": "8 oz Plastx Deli Containers Combo",
+    "price": 26.50,
+    "unit": "240/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "sc-32 32 oz container combo 240/cs": {
+    "item": "SC-32 32 oz Container Combo",
+    "price": 39.99,
+    "unit": "240/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "11/06/2026",
+    "source": "invoice-import"
+  },
+  "natural lids for 64-86-128 oz 200/cs": {
+    "item": "Natural Lids for 64-86-128 oz",
+    "price": 48.75,
+    "unit": "200/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "168 oz container natural hdpe 100/cs": {
+    "item": "168 oz Container Natural HDPE",
+    "price": 122.00,
+    "unit": "100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "128 oz natural container hdpe 100/cs": {
+    "item": "128 oz Natural Container HDPE",
+    "price": 122.00,
+    "unit": "100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "17/04/2026",
+    "source": "invoice-import"
+  },
+  "86 oz natural container hdpe 200/cs": {
+    "item": "86 oz Natural Container HDPE",
+    "price": 119.99,
+    "unit": "200/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "64 oz natural container hdpe 200/cs": {
+    "item": "64 oz Natural Container HDPE",
+    "price": 119.00,
+    "unit": "200/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "17/04/2026",
+    "source": "invoice-import"
+  },
+  "p200n 2 oz solo portion cups 10x250": {
+    "item": "2 oz Solo Portion Cups",
+    "price": 31.00,
+    "unit": "10x250",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "pl200n lids for 2 oz dart portion cups": {
+    "item": "Lids for 2 oz Dart Portion Cups",
+    "price": 25.50,
+    "unit": "2500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "plast-x 12 oz clear bowls 12/40ct": {
+    "item": "Plast-X 12 oz Clear Bowls",
+    "price": 27.00,
+    "unit": "12/40ct",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "settings 12 oz clear hard plastic bowls 12/18ct": {
+    "item": "Settings 12 oz Clear Hard Plastic Bowls",
+    "price": 39.00,
+    "unit": "12/18ct",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "classic silver forks 24/20": {
+    "item": "Classic Silver Forks",
+    "price": 28.50,
+    "unit": "24/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "classic silver knives 24/20": {
+    "item": "Classic Silver Knives",
+    "price": 28.50,
+    "unit": "24/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "classic silver spoons 24/20": {
+    "item": "Classic Silver Spoons",
+    "price": 28.50,
+    "unit": "24/20",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "soup spoon bulk 1000/cs": {
+    "item": "Soup Spoon Bulk",
+    "price": 6.00,
+    "unit": "1000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "forks bulk 1000/cs": {
+    "item": "Forks Bulk",
+    "price": 6.00,
+    "unit": "1000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "cutlery kit k/f/t/n salt/pap 250/cs": {
+    "item": "Cutlery Kit K/F/T/N Salt/Pap Medium Weight",
+    "price": 15.50,
+    "unit": "250/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "lerner tea lights in bag 6x100cs": {
+    "item": "Lerner Tea Lights",
+    "price": 28.50,
+    "unit": "6x100/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "lerner shava havdules 1/ea": {
+    "item": "Lerner Shava Havdules",
+    "price": 4.55,
+    "unit": "each",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "23/04/2026",
+    "source": "invoice-import"
+  },
+  "lerner round havdulah candle 1/ea": {
+    "item": "Lerner Round Havdulah Candle",
+    "price": 3.15,
+    "unit": "each",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "23/04/2026",
+    "source": "invoice-import"
+  },
+  "shalhaves 4\" long matches 45ct 24/tray": {
+    "item": "Shalhaves 4\" Long Matches 45ct",
+    "price": 24.00,
+    "unit": "24/tray",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "23/04/2026",
+    "source": "invoice-import"
+  },
+  "9\" wide mixed color straws 40/40bg wrapped": {
+    "item": "9\" Wide Mixed Color Straws Wrapped",
+    "price": 42.00,
+    "unit": "1600/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "24/03/2026",
+    "source": "invoice-import"
+  },
+  "8\" wrapped colossal straw 300/bx": {
+    "item": "8\" Wrapped Colossal Straw",
+    "price": 3.50,
+    "unit": "300/bx",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "dart 9\" foam plate 4/125": {
+    "item": "Dart 9\" Foam Plate",
+    "price": 19.50,
+    "unit": "500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "8\" bamboo skewer 100/bag": {
+    "item": "8\" Bamboo Skewer",
+    "price": 1.05,
+    "unit": "100/bag",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "6\" bamboo skewer 100/bag": {
+    "item": "6\" Bamboo Skewer",
+    "price": 1.05,
+    "unit": "100/bag",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "bamboo picks 4\" knot 24/100ct": {
+    "item": "Bamboo Picks 4\" Knot",
+    "price": 58.00,
+    "unit": "24/100ct",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "04/06/2026",
+    "source": "invoice-import"
+  },
+  "4 oz utility foil cup 1000/cs": {
+    "item": "4 oz Utility Foil Cup",
+    "price": 75.00,
+    "unit": "1000/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "36\" #50 kraft roll recycled": {
+    "item": "36\" #50 Kraft Roll Recycled",
+    "price": 32.00,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "10/03/2026",
+    "source": "invoice-import"
+  },
+  "30\" white butcher paper": {
+    "item": "30\" White Butcher Paper",
+    "price": 38.00,
+    "unit": "roll",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "04/06/2026",
+    "source": "invoice-import"
+  },
+  "13x7x17 kraft paper handle bag 250/bndl": {
+    "item": "13x7x17 Kraft Paper Handle Bag",
+    "price": 42.00,
+    "unit": "250/bndl",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "10x6.75x12 kraft paper handle bag 250/bndl": {
+    "item": "10x6.75x12 Kraft Paper Handle Bag",
+    "price": 58.00,
+    "unit": "250/bndl",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "12.5x6.75x16.75\" kraft handle paper bag 200/cs": {
+    "item": "12.5x6.75x16.75\" Kraft Handle Paper Bag",
+    "price": 33.60,
+    "unit": "200/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "15/04/2026",
+    "source": "invoice-import"
+  },
+  "10x5x13 white paper bag w/handle 250/bd": {
+    "item": "10x5x13 White Paper Bag with Handle",
+    "price": 78.00,
+    "unit": "250/bd",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/05/2026",
+    "source": "invoice-import"
+  },
+  "receipt rolls 3.125-1/8\"x220' thermal 50/cs": {
+    "item": "Receipt Rolls 3.125\" Thermal Coreless",
+    "price": 68.00,
+    "unit": "50/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "12/02/2026",
+    "source": "invoice-import"
+  },
+  "bunn rack covers 52x80 hd 50/cs": {
+    "item": "Bunn Rack Covers 52x80 HD",
+    "price": 19.00,
+    "unit": "50/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/01/2026",
+    "source": "invoice-import"
+  },
+  "plasti plus table cover 66\"x54\" 10/32ct": {
+    "item": "Plasti Plus Table Cover 66\"x54\"",
+    "price": 79.99,
+    "unit": "10/32ct",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "11/06/2026",
+    "source": "invoice-import"
+  },
+  "meitiv 66x54\" table covers 10/32ct": {
+    "item": "Meitiv 66x54\" Table Covers",
+    "price": 79.99,
+    "unit": "10/32ct",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "09/06/2026",
+    "source": "invoice-import"
+  },
+  "black caps for pet juice bottles 2500/cs": {
+    "item": "Black Caps for PET Juice Bottles",
+    "price": 99.00,
+    "unit": "2500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "28/04/2026",
+    "source": "invoice-import"
+  },
+  "green power for pot & pan 4/1 gal": {
+    "item": "Green Power for Pot & Pan",
+    "price": 17.50,
+    "unit": "4/1gal",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "22/01/2026",
+    "source": "invoice-import"
+  },
+  "see true window cleaner 4/1 gal": {
+    "item": "See True Window Cleaner",
+    "price": 16.75,
+    "unit": "4/1gal",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "bleach 6/1 gal": {
+    "item": "Bleach",
+    "price": 17.50,
+    "unit": "6/1gal",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "04/06/2026",
+    "source": "invoice-import"
+  },
+  "5 gal bucket lavender cleaner": {
+    "item": "5 Gal Bucket Lavender Cleaner",
+    "price": 25.00,
+    "unit": "each",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "04/06/2026",
+    "source": "invoice-import"
+  },
+  "green scrub pads 6x9 6/10pk": {
+    "item": "Green Scrub Pads 6x9",
+    "price": 21.00,
+    "unit": "60/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "25/02/2026",
+    "source": "invoice-import"
+  },
+  "microfiber terry cloth green 16x16 2x12/pk": {
+    "item": "Microfiber Terry Cloth Green 16x16",
+    "price": 26.00,
+    "unit": "2x12/pk",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "24/03/2026",
+    "source": "invoice-import"
+  },
+  "easy off hd oven spray 12x14.5 oz": {
+    "item": "Easy Off HD Oven Spray",
+    "price": 42.50,
+    "unit": "12/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/05/2026",
+    "source": "invoice-import"
+  },
+  "easy off oven fume free 12/14.5 oz": {
+    "item": "Easy Off Oven Fume Free",
+    "price": 42.50,
+    "unit": "12/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "17/06/2026",
+    "source": "invoice-import"
+  },
+  "well done st. muritz oven cleaner 12/cs": {
+    "item": "Well Done St. Muritz Oven Cleaner",
+    "price": 59.00,
+    "unit": "12/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/05/2026",
+    "source": "invoice-import"
+  },
+  "#32 mop heads cotton 12/cs": {
+    "item": "#32 Mop Heads Cotton",
+    "price": 41.00,
+    "unit": "12/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "11/06/2026",
+    "source": "invoice-import"
+  },
+  "apron heavy duty 28 x 46": {
+    "item": "Apron Heavy Duty 28 x 46",
+    "price": 65.00,
+    "unit": "250/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/01/2026",
+    "source": "invoice-import"
+  },
+  "55 gal brute can blue 1/ea": {
+    "item": "55 Gal Brute Can Blue",
+    "price": 94.00,
+    "unit": "each",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "02/06/2026",
+    "source": "invoice-import"
+  },
+  "4 gal round white pail w/handle": {
+    "item": "4 Gal Round White Pail with Handle",
+    "price": 4.95,
+    "unit": "each",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "01/01/2026",
+    "source": "invoice-import"
+  },
+  "round white lid for 4 gal pail": {
+    "item": "Round White Lid for 4 Gal Pail",
+    "price": 1.45,
+    "unit": "each",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "01/01/2026",
+    "source": "invoice-import"
+  },
+  "jumbo scrubbers 6/12": {
+    "item": "Jumbo Scrubbers",
+    "price": 27.00,
+    "unit": "6/12",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "01/01/2026",
+    "source": "invoice-import"
+  },
+  "26 oz kraft bowl round 500/cs": {
+    "item": "26 oz Kraft Bowl Round",
+    "price": 125.00,
+    "unit": "500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/05/2026",
+    "source": "invoice-import"
+  },
+  "dome lid for 26 oz kraft paper bowl 500/cs": {
+    "item": "Dome Lid for 26 oz Kraft Paper Bowl",
+    "price": 65.00,
+    "unit": "500/cs",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "07/05/2026",
+    "source": "invoice-import"
+  },
+  "papermade insulated 12 oz paper hot cups 25/16ct": {
+    "item": "Papermade Insulated 12 oz Paper Hot Cups",
+    "price": 62.00,
+    "unit": "25/16ct",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "papermade white dome lids for paper cups 10/100pk": {
+    "item": "Papermade White Dome Lids for Paper Cups",
+    "price": 35.00,
+    "unit": "10/100pk",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "12/06/2026",
+    "source": "invoice-import"
+  },
+  "sealco 16oz deli cont combo 10/24pk": {
+    "item": "Sealco 16oz Deli Container Combo",
+    "price": 26.99,
+    "unit": "10/24pk",
+    "vendorName": "Chester Plastic",
+    "category": "supplies",
+    "updatedAt": "11/06/2026",
+    "source": "invoice-import"
+  },
+
+  "tumbler 8 oz 500/cs (frankel)": {
+    "item": "Tumbler 8 oz",
+    "price": 43.50,
+    "unit": "500/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "15/05/2026",
+    "source": "invoice-import"
+  },
+  "tumbler 7 oz 500/cs (frankel)": {
+    "item": "Tumbler 7 oz",
+    "price": 36.50,
+    "unit": "500/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "15/05/2026",
+    "source": "invoice-import"
+  },
+  "10oz paper cup double wall 400/cs dinning collection": {
+    "item": "10 oz Paper Cup Double Wall - Dining Collection",
+    "price": 62.00,
+    "unit": "400/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "14/05/2026",
+    "source": "invoice-import"
+  },
+  "lids for 10-24oz paper cup 1000/cs metro source white": {
+    "item": "Lids for 10-24oz Paper Cup Metro Source White",
+    "price": 27.95,
+    "unit": "1000/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "14/05/2026",
+    "source": "invoice-import"
+  },
+  "black lid dome cup paper hot 10-24oz 1000/cs": {
+    "item": "Black Lid Dome Cup Paper Hot 10-24oz",
+    "price": 27.95,
+    "unit": "1000/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "9\" clear hard plate 12x20/cs (frankel)": {
+    "item": "9\" Clear Hard Plate",
+    "price": 42.50,
+    "unit": "12x20/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "14/05/2026",
+    "source": "invoice-import"
+  },
+  "7\" clear plate hard 12x20/cs (frankel)": {
+    "item": "7\" Clear Plate Hard",
+    "price": 29.95,
+    "unit": "12x20/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "14/05/2026",
+    "source": "invoice-import"
+  },
+  "10oz clear bowl 12x20/cs (frankel)": {
+    "item": "10 oz Clear Bowl",
+    "price": 32.00,
+    "unit": "12x20/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "cup souffle 2 oz portion 2500/cs p200n": {
+    "item": "2 oz Souffle Portion Cup",
+    "price": 32.50,
+    "unit": "2500/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "lid for 2oz portion cup pl200n 2500/cs": {
+    "item": "Lid for 2 oz Portion Cup PL200N",
+    "price": 28.50,
+    "unit": "2500/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "5.5\" wood stirrer 10000/cs": {
+    "item": "5.5\" Wood Stirrer",
+    "price": 19.50,
+    "unit": "10000/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "beverage napkins white 4000/cs": {
+    "item": "Beverage Napkins White",
+    "price": 14.95,
+    "unit": "4000/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "full size deep alum pan 50/cs (frankel)": {
+    "item": "Full Size Deep Aluminum Pan",
+    "price": 51.00,
+    "unit": "50/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "full size medium alum pan 50/cs (frankel)": {
+    "item": "Full Size Medium Aluminum Pan",
+    "price": 51.00,
+    "unit": "50/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "lid aluminum pan full size 50/cs": {
+    "item": "Lid Aluminum Pan Full Size",
+    "price": 28.50,
+    "unit": "50/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "towel roll white 800ft 6/cs (frankel)": {
+    "item": "Towel Roll White 800ft",
+    "price": 26.99,
+    "unit": "6/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "lavender 5 gal (frankel)": {
+    "item": "Lavender Cleaner 5 Gal",
+    "price": 20.99,
+    "unit": "each",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "aluminum pan loaf 3lb 350ct #606": {
+    "item": "Aluminum Pan Loaf 3lb",
+    "price": 139.00,
+    "unit": "350ct",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "gloves latex pf large 1000/cs (frankel)": {
+    "item": "Gloves Latex PF Large",
+    "price": 37.95,
+    "unit": "1000/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "13/05/2026",
+    "source": "invoice-import"
+  },
+  "mop dust 24\" 12/cs": {
+    "item": "Mop Dust 24\"",
+    "price": 48.00,
+    "unit": "12/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "26/05/2026",
+    "source": "invoice-import"
+  },
+  "mop dust 36\" 12/cs": {
+    "item": "Mop Dust 36\"",
+    "price": 56.00,
+    "unit": "12/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "26/05/2026",
+    "source": "invoice-import"
+  },
+  "towel c-fold white 2400ct": {
+    "item": "Towel C-Fold White",
+    "price": 18.50,
+    "unit": "2400ct",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "26/05/2026",
+    "source": "invoice-import"
+  },
+  "candles tealight 12x50/cs": {
+    "item": "Candles Tealight",
+    "price": 39.95,
+    "unit": "12x50/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "17/06/2026",
+    "source": "invoice-import"
+  },
+  "wine cup 5oz silver w/tray 120/cs": {
+    "item": "Wine Cup 5oz Silver with Tray",
+    "price": 76.95,
+    "unit": "120/cs",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "17/06/2026",
+    "source": "invoice-import"
+  },
+  "white cloth waiter gloves case": {
+    "item": "White Cloth Waiter Gloves",
+    "price": 280.00,
+    "unit": "case",
+    "vendorName": "M&M Frankel",
+    "category": "supplies",
+    "updatedAt": "17/06/2026",
+    "source": "invoice-import"
+  },
+
+  "full size deep aluminum pan qualmax": {
+    "item": "Full Size Deep Aluminum Pan",
+    "price": 52.00,
+    "unit": "50/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "03/02/2026",
+    "source": "invoice-import"
+  },
+  "nitrile gloves black large 10/100 qualmax": {
+    "item": "Nitrile Gloves Black Large",
+    "price": 41.36,
+    "unit": "10/100",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "04/02/2026",
+    "source": "invoice-import"
+  },
+  "cotton waiters glove men pair qualmax": {
+    "item": "Cotton Waiters Glove Men",
+    "price": 3.45,
+    "unit": "per dozen",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "04/02/2026",
+    "source": "invoice-import"
+  },
+  "handy fuel can 2.5 hr gel 72/cs qualmax": {
+    "item": "Handy Fuel Can 2.5 HR Gel",
+    "price": 48.00,
+    "unit": "72/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "26/01/2026",
+    "source": "invoice-import"
+  },
+  "genuine joe multi fold towel white 16/250/cs": {
+    "item": "Genuine Joe Multi Fold Towel White",
+    "price": 28.50,
+    "unit": "16/250/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "26/01/2026",
+    "source": "invoice-import"
+  },
+  "fabuloso lavender cleaner 5 gal pail qualmax": {
+    "item": "Fabuloso Lavender Cleaner 5 Gal Pail",
+    "price": 29.00,
+    "unit": "each",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "26/01/2026",
+    "source": "invoice-import"
+  },
+  "individual liquid enzyme cleaner drains 5gal": {
+    "item": "Individual Liquid Enzyme Cleaner Drains",
+    "price": 97.63,
+    "unit": "5gal",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "individual max-3x #1 mechanical detergent 2gal/cs": {
+    "item": "Max-3X #1 Mechanical Detergent",
+    "price": 36.07,
+    "unit": "2gal/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "15/01/2026",
+    "source": "invoice-import"
+  },
+  "individual max-3x #2 mechanical rinse-aid 2/1gal/cs": {
+    "item": "Max-3X #2 Mechanical Rinse-Aid",
+    "price": 41.00,
+    "unit": "2/1gal/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "29/01/2026",
+    "source": "invoice-import"
+  },
+  "glass cleaner foaming aerosol 12x19oz/cs": {
+    "item": "Glass Cleaner Foaming Aerosol",
+    "price": 46.00,
+    "unit": "12x19oz/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "29/01/2026",
+    "source": "invoice-import"
+  },
+  "24 oz round microwavable container 150/cs": {
+    "item": "24 oz Round Microwavable Container",
+    "price": 29.00,
+    "unit": "150/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "17/02/2026",
+    "source": "invoice-import"
+  },
+  "htdro auto dose pail mount dispensing system 5gal": {
+    "item": "Hydro Auto Dose Pail Mount Dispensing System",
+    "price": 298.95,
+    "unit": "each",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "20/02/2026",
+    "source": "invoice-import"
+  },
+  "10 oz paper designed cup ripple 500/cs": {
+    "item": "10 oz Paper Designed Cup Ripple",
+    "price": 47.00,
+    "unit": "500/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "27/02/2026",
+    "source": "invoice-import"
+  },
+  "8 oz tumbler #408-cl 500/cs qualmax": {
+    "item": "8 oz Tumbler #408-CL",
+    "price": 39.99,
+    "unit": "500/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "17/03/2026",
+    "source": "invoice-import"
+  },
+  "roll towel white 800 ft 6/cs qualmax": {
+    "item": "Roll Towel White 800ft",
+    "price": 26.66,
+    "unit": "6/cs",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "17/03/2026",
+    "source": "invoice-import"
+  },
+  "individual e2 antibacterial foam hand soap 6/1000ml": {
+    "item": "E2 Antibacterial Foam Hand Soap",
+    "price": 50.90,
+    "unit": "6/1000ml",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "17/03/2026",
+    "source": "invoice-import"
+  },
+  "individual liquid enzyme cleaner drains 5gal qualmax may": {
+    "item": "Individual Liquid Enzyme Cleaner Drains",
+    "price": 97.63,
+    "unit": "5gal",
+    "vendorName": "Qualmax",
+    "category": "supplies",
+    "updatedAt": "05/05/2026",
+    "source": "invoice-import"
+  }
+}
