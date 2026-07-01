@@ -11,6 +11,8 @@ const CATS = [
   {id:"dry",      label:"Dry Goods",      icon:"🫙", color:"#6D28D9"},
   {id:"bakery",   label:"Bakery",         icon:"🍞", color:"#9A3412"},
   {id:"beverage", label:"Beverages",      icon:"🧃", color:"#0F766E"},
+    {id:"supplies", label:"Kitchen Supplies", icon:"🧽", color:"#4B5563"},
+
 ];
 
 const CONTACT = [
